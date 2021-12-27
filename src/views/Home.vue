@@ -1,12 +1,16 @@
 <template>
-  <h1>Home</h1>
+  <useEyeDropper />
 </template>
 
-<script>
+<script lang="ts">
 import {ref, defineComponent} from 'vue'
+import useEyeDropper from '../components/demo/useEyeDropper.vue'
 
 export default defineComponent({
   name: "Home",
+  components: {
+    useEyeDropper
+  },
 
   setup() {
     return {}
@@ -14,6 +18,6 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>
