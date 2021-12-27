@@ -1,23 +1,30 @@
 <template>
   <template v-if="isSupported">
+    <el-input v-model="sRGBHex" />
     <div>sRGBHex: {{ sRGBHex }}</div>
   </template>
   <div>
-    <button
-        :disabled="!isSupported"
+    <el-button
+        circle
         @click="open"
     >
-      {{ isSupported ? 'Open Eye Dropper' : 'Not Supported by Your Browser' }}
-    </button>
+      <el-icon :size="20">
+        <Star/>
+      </el-icon>
+    </el-button>
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import {useEyeDropper} from '@vueuse/core'
 import {defineComponent} from 'vue'
+import {Star} from '@element-plus/icons-vue'
 
 export default defineComponent({
   name: "UseEyeDropper",
+  components: {
+    Star
+  },
   setup() {
     const {isSupported, open, sRGBHex} = useEyeDropper()
     return {
