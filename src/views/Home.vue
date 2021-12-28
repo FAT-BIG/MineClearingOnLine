@@ -1,15 +1,16 @@
 <template>
-  <useEyeDropper />
+  <eye-dropper />
+  <battery-info />
+  <fullscreen />
 </template>
 
 <script lang="ts">
-import {ref, defineComponent} from 'vue'
-import useEyeDropper from '../components/demo/useEyeDropper.vue'
+import {defineComponent} from 'vue'
 
 export default defineComponent({
   name: "Home",
   components: {
-    useEyeDropper
+
   },
 
   setup() {
