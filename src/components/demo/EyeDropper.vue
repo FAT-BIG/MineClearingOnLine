@@ -1,6 +1,6 @@
 <template>
   <template v-if="isSupported">
-    <el-input v-model="sRGBHex" />
+    <div class="color-block" :style="{background: sRGBHex}"></div>
     <div>sRGBHex: {{ sRGBHex }}</div>
   </template>
   <div>
@@ -38,5 +38,9 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-
+.color-block {
+  width: 48px;
+  height: 48px;
+  background: #45be87;
+}
 </style>

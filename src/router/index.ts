@@ -1,7 +1,7 @@
 import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router'
 import Home from '../views/Home.vue'
 
-// const Test = () => import('../views/Test.vue')
+const Motions = () => import('../views/Motions.vue')
 
 const routes: Array<RouteRecordRaw> = [
     {
@@ -9,11 +9,11 @@ const routes: Array<RouteRecordRaw> = [
         name: 'Home',
         component: Home
     },
-    // {
-    //     path: '/test',
-    //     name: 'Test',
-    //     component: Test
-    // },
+    {
+        path: '/motions',
+        name: 'motions',
+        component: Motions
+    },
 ]
 
 const router = createRouter({
